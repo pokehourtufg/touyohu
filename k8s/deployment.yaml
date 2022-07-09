@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sdghv
+  name: uyhgf
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: sdghv
+      app: uyhgf
   template:
     metadata:
       labels:
-        app: sdghv
+        app: uyhgf
     spec:
       containers:
-      - image: okteto.dev/sdghv:latest
-        name: sdghv
+      - image: okteto.dev/uyhgf:latest
+        name: uyhgf
         ports:
         - containerPort: 8080
         env:
