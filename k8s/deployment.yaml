@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mkloiu
+  name: goury
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mkloiu
+      app: goury
   template:
     metadata:
       labels:
-        app: mkloiu
+        app: goury
     spec:
       containers:
-      - image: okteto.dev/seiodck:latest
-        name: mkloiu
+      - image: okteto.dev/goury:latest
+        name: goury
         ports:
         - containerPort: 8080
         env:
