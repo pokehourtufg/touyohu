@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: seiodck
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: seiodck
+  template:
+    metadata:
+      labels:
+        app: seiodck
+    spec:
+      containers:
+      - image: okteto.dev/seiodck:latest
+        name: seiodck
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: ProxySite
+          value: "icook.tw"
+        - name: Vless_UUID
+          value: "e3682dbe-21c3-49e0-8a93-0e66010a6d7e"
+        - name: Vless_Path
+          value: "/e3682dbe-21c3-49e0-8a93-0e66010a6d7e-vless"
+        - name: Vmess_UUID
+          value: "e3682dbe-21c3-49e0-8a93-0e66010a6d7e"
+        - name: Vmess_Path
+          value: "/4cc6f83d-3b71-4d66-be9f-80aedb19e8a2-vmess"
+        - name: Share_Path
+          value: "$Share_Path"
