@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: humnv
+  name: fewer
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: humnv
+      app: fewer
   template:
     metadata:
       labels:
-        app: humnv
+        app: fewer
     spec:
       containers:
-      - image: okteto.dev/humnv:latest
-        name: humnv
+      - image: okteto.dev/fewer:latest
+        name: fewer
         ports:
         - containerPort: 8080
         env:
