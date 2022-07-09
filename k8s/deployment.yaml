@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ouvz
+  name: coern
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ouvz
+      app: coern
   template:
     metadata:
       labels:
-        app: ouvz
+        app: coern
     spec:
       containers:
-      - image: okteto.dev/ouvz:latest
-        name: ouvz
+      - image: okteto.dev/coern:latest
+        name: coern
         ports:
         - containerPort: 8080
         env:
