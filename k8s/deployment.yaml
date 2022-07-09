@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bgrty
+  name: ouvz
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bgrty
+      app: ouvz
   template:
     metadata:
       labels:
-        app: bgrty
+        app: ouvz
     spec:
       containers:
-      - image: okteto.dev/bgrty:latest
-        name: bgrty
+      - image: okteto.dev/ouvz:latest
+        name: ouvz
         ports:
         - containerPort: 8080
         env:
