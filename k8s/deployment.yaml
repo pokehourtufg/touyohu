@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: uyhgf
+  name: bgrty
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: uyhgf
+      app: bgrty
   template:
     metadata:
       labels:
-        app: uyhgf
+        app: bgrty
     spec:
       containers:
-      - image: okteto.dev/uyhgf:latest
-        name: uyhgf
+      - image: okteto.dev/bgrty:latest
+        name: bgrty
         ports:
         - containerPort: 8080
         env:
