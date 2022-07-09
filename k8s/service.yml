@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: seiodck
+  name: mkloiu
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "seiodck"
+  - name: "mkloiu"
     port: 8080
   selector:
-    app: seiodck
+    app: mkloiu
