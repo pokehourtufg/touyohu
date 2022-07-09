@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ouvz
+  name: coern
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "ouvz"
+  - name: "coern"
     port: 8080
   selector:
-    app: ouvz
+    app: coern
