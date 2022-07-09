@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: goury
+  name: humnv
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: goury
+      app: humnv
   template:
     metadata:
       labels:
-        app: goury
+        app: humnv
     spec:
       containers:
-      - image: okteto.dev/goury:latest
-        name: goury
+      - image: okteto.dev/humnv:latest
+        name: humnv
         ports:
         - containerPort: 8080
         env:
