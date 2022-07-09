@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fewer
+  name: sdghv
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: fewer
+      app: sdghv
   template:
     metadata:
       labels:
-        app: fewer
+        app: sdghv
     spec:
       containers:
-      - image: okteto.dev/fewer:latest
-        name: fewer
+      - image: okteto.dev/sdghv:latest
+        name: sdghv
         ports:
         - containerPort: 8080
         env:
