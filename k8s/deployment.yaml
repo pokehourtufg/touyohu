@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: coern
+  name: vghun
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: coern
+      app: vghun
   template:
     metadata:
       labels:
-        app: coern
+        app: vghun
     spec:
       containers:
-      - image: okteto.dev/coern:latest
-        name: coern
+      - image: okteto.dev/vghun:latest
+        name: vghun
         ports:
         - containerPort: 8080
         env:
